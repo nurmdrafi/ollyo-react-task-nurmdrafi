@@ -41,3 +41,50 @@ button {
   transition: border-color 0.25s;
 }
 
+/* Container styles */
+.container {
+  max-width: 1200px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container */
+  padding: 15px;
+}
+
+/* Gallery styles */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+/* Item styles */
+.item {
+  width: 100%; /* Each item takes up 20% of the container's width */
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* Double-size item styles */
+.item.double-size {
+  grid-column: span 2; /* Takes up 2 columns in the grid */
+  grid-row: span 2; /* Takes up 2 rows in the grid */
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .item.double-size {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+}
