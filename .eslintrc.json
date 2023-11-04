@@ -10,7 +10,6 @@
     "parser": "@typescript-eslint/parser",
     "project": "./tsconfig.json"
   },
-  "ignorePatterns": ["dist", ".eslintrc.cjs"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -103,6 +102,7 @@
     "@typescript-eslint/quotes": "off",
     "@typescript-eslint/naming-convention": "off",
     "@typescript-eslint/no-var-requires": "off",
+    "import/extensions": "off",
     "import/first": "error",
     "import/no-mutable-exports": "error",
     "import/no-useless-path-segments": "error",
@@ -162,7 +162,7 @@
       "warn",
       {
         "props": true,
-        "ignorePropertyModificationsFor": ["state"],
+        "ignorePropertyModificationsFor": ["state"]
       }
     ],
     "jsx-quotes": "off",

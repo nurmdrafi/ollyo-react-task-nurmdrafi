@@ -1,5 +1,11 @@
+.husky
+.vscode
+node_modules
+dist
 .eslintrc.json
 tsconfig.json
+tsconfig.node.json
+package.json
+package-lock.json
 *.config.js
-out
-node_modules
+*.config.ts
