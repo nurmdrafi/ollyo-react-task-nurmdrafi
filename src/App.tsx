@@ -11,6 +11,7 @@ import { Provider } from "react-redux"
 const App = () => {
   return (
     <div>
+      
       {/* Gallery */}
       <Provider store={ store }>
         <div style={ galleryWrapper }>
