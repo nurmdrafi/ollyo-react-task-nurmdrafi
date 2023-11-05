@@ -42,16 +42,18 @@ const Header: React.FC = () => {
 
   return (
     <div className='header'>
-      {/* Text + Checkbox + Image Count  */}
       {selectedImagesCount ? (
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div className='checkbox-wrapper'>
+          {/* Checkbox */}
           <label className='checkbox-label'>
             <input
               type='checkbox'
               checked={ isChecked }
             />
           </label>
-          <h2 style={{ marginLeft: '5px' }}>{ selectedImagesCount } File{selectedImagesCount === 1 ? '' : 's'} Selected</h2>
+
+          {/* Selected Image Count */}
+          <h2>{ selectedImagesCount } File{selectedImagesCount === 1 ? '' : 's'} Selected</h2>
         </div>
       ) : (
         <h2>Gallery</h2>

@@ -45,7 +45,8 @@ h2 {
   background-color: transparent;
   border: transparent;
   font-size: 20px;
-  padding: 0
+  padding: 0;
+  font-weight: bold;
 }
 
 .header button:hover {
@@ -64,6 +65,16 @@ h2 {
   top: 1px;
   left: 1px;
 
+}
+
+.header .checkbox-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  margin-left: 5px;
 }
 
 /* Gallery Styles */

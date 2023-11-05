@@ -30,17 +30,10 @@ const Images: React.FC = () => {
     e.preventDefault()
   }
  
-  //   const _handleDragEnter = () => {
-  //     // item: GalleryItem
-  //   }
- 
-  //   const _handleDragLeave = () => {
-  //     // item: GalleryItem
-  //   }
- 
   // Handle Drop
   const _handleDrop = (e: React.DragEvent<HTMLDivElement>, targetItem: GalleryItem) => {
     e.preventDefault()
+
     if (draggedItem && draggedItem.id !== targetItem.id) {
       const newImages = [...images]
       const draggedIndex = images.findIndex((item: GalleryItem) => item.id === draggedItem.id)
@@ -65,6 +58,7 @@ const Images: React.FC = () => {
   // Handle Mouse Enter
   const _handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>, targetItem: GalleryItem) => {
     e.preventDefault()
+
     const newImages = [...images]
     const targetIndex = images.findIndex((item: GalleryItem) => item.id === targetItem.id)
  
@@ -91,9 +85,7 @@ const Images: React.FC = () => {
           key={ item.id }
           className={ `item ${ item.isDoubleSize ? 'double-size' : '' }` }
           onDragStart={ (e) => _handleDragStart(e, item) }
-          onDragOver={ _handleDragOver }
-          //   onDragEnter={ () => _handleDragEnter() }
-          //   onDragLeave={ () => _handleDragLeave() }
+          onDragOver={ (e) => _handleDragOver(e) }
           onDrop={ (e) => _handleDrop(e, item) }
           onMouseEnter={ (e) => _handleMouseEnter(e, item) }
           onMouseLeave={ (e) => _handleMouseLeave(e, item) }
@@ -109,9 +101,6 @@ const Images: React.FC = () => {
 
       {/* Upload Button */}
       <Uploader />
-        
-      {/* For Adjust Upload Button Height */}
-      {/* <img className='hidden' src={ demoImg } aria-hidden alt='test' /> */}
     </div>
   )
 }
