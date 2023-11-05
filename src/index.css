@@ -21,47 +21,52 @@ h2 {
   padding: 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-/* Container styles */
+/* Container Styles */
 .container {
   max-width: 1200px;
   margin: 50px auto;
-  padding: 15px;
+  padding: 15px 0;
   background-color: #fff;
   border-radius: 10px;
 }
 
+/* Header Styles */
 .header {
   border-bottom: 1.5px solid #ccc;
   padding: 10px 20px 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
-.header button {
+ .header button {
   color: #db4d4d;
   background-color: transparent;
+  border: transparent;
   font-size: 20px;
   padding: 0
 }
 
 .header button:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
-/* Gallery styles */
+.header label input[type="checkbox"] {
+  width: 24px; 
+  height: 24px;
+  cursor: pointer;
+}
+
+.header .checkbox-label {
+  position: relative;
+  top: 1px;
+  left: 1px;
+
+}
+
+/* Gallery Styles */
 .gallery {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -70,7 +75,8 @@ button {
   margin-top: 20px;
 }
 
-/* Item styles */
+
+/* Item Styles */
 .item {
   width: 100%; 
   box-sizing: border-box;
@@ -161,7 +167,7 @@ button {
 }
 
 .checkbox-label {
-  position:absolute;
+  position: absolute;
   top: 15px;
   left: 15px
 }
