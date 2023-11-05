@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
 // Import Icon
 import uploadIcon from '../Assets/Icons/upload.png'
@@ -21,10 +22,9 @@ const Uploader: React.FC = () => {
     const file = e.target.files && e.target.files[0]
     if (file) {
       const newImages = [...images]
-      const newId = images.length + 1
 
       newImages.push({
-        id: newId,
+        id: uuidv4(),
         imagePath: URL.createObjectURL(file),
         isDoubleSize: images.length === 0,
       })
